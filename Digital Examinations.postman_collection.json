@@ -1,0 +1,708 @@
+{
+	"info": {
+		"_postman_id": "9295400d-207f-4843-b907-3850e7ebfa80",
+		"name": "Digital Examinations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10483052"
+	},
+	"item": [
+		{
+			"name": "Exams",
+			"item": [
+				{
+					"name": "Post Exam",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Exam 3\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"Question 1\",\r\n      \"questionType\": 0,\r\n      \"score\": 1,\r\n      \"answers\": [\r\n        {\r\n          \"answerText\": \"option 1\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"option 2\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"option 3\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"option 4\",\r\n          \"isCorrect\": true\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"questionText\": \"Question 2\",\r\n      \"questionType\": 1,\r\n      \"score\": 1,\r\n      \"answers\": [\r\n        {\r\n          \"answerText\": \"false\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"true\",\r\n          \"isCorrect\": true\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Exams",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Exams"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post exam",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Exam 3\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"Question 1\",\r\n      \"questionType\": 0,\r\n      \"score\": 1,\r\n      \"answers\": [\r\n        {\r\n          \"answerText\": \"option 1\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"option 2\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"option 3\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"option 4\",\r\n          \"isCorrect\": true\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"questionText\": \"Question 2\",\r\n      \"questionType\": 1,\r\n      \"score\": 1,\r\n      \"answers\": [\r\n        {\r\n          \"answerText\": \"false\",\r\n          \"isCorrect\": false\r\n        },\r\n        {\r\n          \"answerText\": \"true\",\r\n          \"isCorrect\": true\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:7029/api/Exams",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Exams"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 16:42:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": null,\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Exams",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}}/Exams",
+							"host": [
+								"{{baseUrl}}}"
+							],
+							"path": [
+								"Exams"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Exams",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7029/api/Exams",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Exams"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:07:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": [\n        {\n            \"id\": 2,\n            \"title\": \"Exam 2\",\n            \"deletedAt\": \"0001-01-01T00:00:00\",\n            \"questions\": [\n                {\n                    \"id\": 2,\n                    \"questionText\": \"Question 1\",\n                    \"questionType\": 0,\n                    \"score\": 1,\n                    \"examId\": 2,\n                    \"answers\": [\n                        null\n                    ]\n                },\n                {\n                    \"id\": 3,\n                    \"questionText\": \"Question 2\",\n                    \"questionType\": 1,\n                    \"score\": 1,\n                    \"examId\": 2,\n                    \"answers\": [\n                        null\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Exam 3\",\n            \"deletedAt\": \"0001-01-01T00:00:00\",\n            \"questions\": [\n                {\n                    \"id\": 4,\n                    \"questionText\": \"Question 1\",\n                    \"questionType\": 0,\n                    \"score\": 1,\n                    \"examId\": 4,\n                    \"answers\": [\n                        null\n                    ]\n                },\n                {\n                    \"id\": 5,\n                    \"questionText\": \"Question 2\",\n                    \"questionType\": 1,\n                    \"score\": 1,\n                    \"examId\": 4,\n                    \"answers\": [\n                        null\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Exam 3\",\n            \"deletedAt\": \"0001-01-01T00:00:00\",\n            \"questions\": [\n                {\n                    \"id\": 6,\n                    \"questionText\": \"Question 1\",\n                    \"questionType\": 0,\n                    \"score\": 1,\n                    \"examId\": 5,\n                    \"answers\": [\n                        null\n                    ]\n                },\n                {\n                    \"id\": 7,\n                    \"questionText\": \"Question 2\",\n                    \"questionType\": 1,\n                    \"score\": 1,\n                    \"examId\": 5,\n                    \"answers\": [\n                        null\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Exam 3\",\n            \"deletedAt\": \"0001-01-01T00:00:00\",\n            \"questions\": [\n                {\n                    \"id\": 8,\n                    \"questionText\": \"Question 1\",\n                    \"questionType\": 0,\n                    \"score\": 1,\n                    \"examId\": 6,\n                    \"answers\": [\n                        {\n                            \"id\": 23,\n                            \"answerText\": \"option 1\",\n                            \"isCorrect\": false,\n                            \"questionId\": 8\n                        },\n                        {\n                            \"id\": 24,\n                            \"answerText\": \"option 2\",\n                            \"isCorrect\": false,\n                            \"questionId\": 8\n                        },\n                        {\n                            \"id\": 25,\n                            \"answerText\": \"option 3\",\n                            \"isCorrect\": false,\n                            \"questionId\": 8\n                        },\n                        {\n                            \"id\": 26,\n                            \"answerText\": \"option 4\",\n                            \"isCorrect\": true,\n                            \"questionId\": 8\n                        }\n                    ]\n                },\n                {\n                    \"id\": 9,\n                    \"questionText\": \"Question 2\",\n                    \"questionType\": 1,\n                    \"score\": 1,\n                    \"examId\": 6,\n                    \"answers\": [\n                        {\n                            \"id\": 27,\n                            \"answerText\": \"false\",\n                            \"isCorrect\": false,\n                            \"questionId\": 9\n                        },\n                        {\n                            \"id\": 28,\n                            \"answerText\": \"true\",\n                            \"isCorrect\": true,\n                            \"questionId\": 9\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Exam 3\",\n            \"deletedAt\": \"0001-01-01T00:00:00\",\n            \"questions\": [\n                {\n                    \"id\": 10,\n                    \"questionText\": \"Question 1\",\n                    \"questionType\": 0,\n                    \"score\": 1,\n                    \"examId\": 7,\n                    \"answers\": [\n                        {\n                            \"id\": 29,\n                            \"answerText\": \"option 1\",\n                            \"isCorrect\": false,\n                            \"questionId\": 10\n                        },\n                        {\n                            \"id\": 30,\n                            \"answerText\": \"option 2\",\n                            \"isCorrect\": false,\n                            \"questionId\": 10\n                        },\n                        {\n                            \"id\": 31,\n                            \"answerText\": \"option 3\",\n                            \"isCorrect\": false,\n                            \"questionId\": 10\n                        },\n                        {\n                            \"id\": 32,\n                            \"answerText\": \"option 4\",\n                            \"isCorrect\": true,\n                            \"questionId\": 10\n                        }\n                    ]\n                },\n                {\n                    \"id\": 11,\n                    \"questionText\": \"Question 2\",\n                    \"questionType\": 1,\n                    \"score\": 1,\n                    \"examId\": 7,\n                    \"answers\": [\n                        {\n                            \"id\": 33,\n                            \"answerText\": \"false\",\n                            \"isCorrect\": false,\n                            \"questionId\": 11\n                        },\n                        {\n                            \"id\": 34,\n                            \"answerText\": \"true\",\n                            \"isCorrect\": true,\n                            \"questionId\": 11\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Exam 3\",\n            \"deletedAt\": \"0001-01-01T00:00:00\",\n            \"questions\": [\n                {\n                    \"id\": 13,\n                    \"questionText\": \"Question 1\",\n                    \"questionType\": 0,\n                    \"score\": 1,\n                    \"examId\": 9,\n                    \"answers\": [\n                        {\n                            \"id\": 35,\n                            \"answerText\": \"option 1\",\n                            \"isCorrect\": false,\n                            \"questionId\": 13\n                        },\n                        {\n                            \"id\": 36,\n                            \"answerText\": \"option 2\",\n                            \"isCorrect\": false,\n                            \"questionId\": 13\n                        },\n                        {\n                            \"id\": 37,\n                            \"answerText\": \"option 3\",\n                            \"isCorrect\": false,\n                            \"questionId\": 13\n                        },\n                        {\n                            \"id\": 38,\n                            \"answerText\": \"option 4\",\n                            \"isCorrect\": true,\n                            \"questionId\": 13\n                        }\n                    ]\n                },\n                {\n                    \"id\": 14,\n                    \"questionText\": \"Question 2\",\n                    \"questionType\": 1,\n                    \"score\": 1,\n                    \"examId\": 9,\n                    \"answers\": [\n                        {\n                            \"id\": 39,\n                            \"answerText\": \"false\",\n                            \"isCorrect\": false,\n                            \"questionId\": 14\n                        },\n                        {\n                            \"id\": 40,\n                            \"answerText\": \"true\",\n                            \"isCorrect\": true,\n                            \"questionId\": 14\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7029/api/Exams/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"Exams",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not found example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7029/api/Exams/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Exams",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:09:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": null,\n    \"isSuccess\": false,\n    \"message\": \"Exam not found\"\n}"
+						},
+						{
+							"name": "Get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7029/api/Exams/6",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Exams",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:10:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"id\": 6,\n        \"title\": \"Exam 3\",\n        \"deletedAt\": \"0001-01-01T00:00:00\",\n        \"questions\": [\n            {\n                \"id\": 8,\n                \"questionText\": \"Question 1\",\n                \"questionType\": 0,\n                \"score\": 1,\n                \"examId\": 6,\n                \"answers\": [\n                    {\n                        \"id\": 23,\n                        \"answerText\": \"option 1\",\n                        \"isCorrect\": false,\n                        \"questionId\": 8\n                    },\n                    {\n                        \"id\": 24,\n                        \"answerText\": \"option 2\",\n                        \"isCorrect\": false,\n                        \"questionId\": 8\n                    },\n                    {\n                        \"id\": 25,\n                        \"answerText\": \"option 3\",\n                        \"isCorrect\": false,\n                        \"questionId\": 8\n                    },\n                    {\n                        \"id\": 26,\n                        \"answerText\": \"option 4\",\n                        \"isCorrect\": true,\n                        \"questionId\": 8\n                    }\n                ]\n            },\n            {\n                \"id\": 9,\n                \"questionText\": \"Question 2\",\n                \"questionType\": 1,\n                \"score\": 1,\n                \"examId\": 6,\n                \"answers\": [\n                    {\n                        \"id\": 27,\n                        \"answerText\": \"false\",\n                        \"isCorrect\": false,\n                        \"questionId\": 9\n                    },\n                    {\n                        \"id\": 28,\n                        \"answerText\": \"true\",\n                        \"isCorrect\": true,\n                        \"questionId\": 9\n                    }\n                ]\n            }\n        ]\n    },\n    \"results\": null,\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Exam",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7029/api/Exams/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"Exams",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Exam",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7029/api/Exams/2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Exams",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:11:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": null,\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Post student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Saed Hossam\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7029/api/Students",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"Students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Saed Hossam\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:7029/api/Students",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Students"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:17:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": null,\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Students list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7029/api/Students",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"Students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Students list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7029/api/Students",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Students"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:18:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"name\": \"Saed Hossam\",\n            \"exams\": []\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Ahmed Saed\",\n            \"exams\": []\n        }\n    ],\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Put Student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Saed Hossam\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7029/api/Students/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"Students",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Put Student",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Saed Hossam\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:7029/api/Students/2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Students",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:19:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": null,\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7029/api/Students/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"Students",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Student",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7029/api/Students/2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7029",
+									"path": [
+										"api",
+										"Students",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Sep 2023 17:20:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": null,\n    \"results\": null,\n    \"isSuccess\": true,\n    \"message\": \"Saved Successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7029/api"
+		}
+	]
+}
