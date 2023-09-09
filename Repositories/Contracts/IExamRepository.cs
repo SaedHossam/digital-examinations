@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Models;
 
 namespace Repositories
 {
     public interface IExamRepository
     {
-
+        Task CreateExam(CreateExamDto payload);
+        Task Delete(int id);
+        Task<Exam?> GetExam(int id);
+        Task<List<Exam>> GetExams();
     }
 }
